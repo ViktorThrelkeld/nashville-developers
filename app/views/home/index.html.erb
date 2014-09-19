@@ -6,6 +6,9 @@
 
 <% if current_user %>
   <h3>Hello, <%= current_user.full_name %></h3>
+  <div>
+  <%= image_tag current_user.image_url.to_s %>
+  </div>
 <% else %>
   <%= link_to user_omniauth_authorize_path(provider: :facebook) do %>
     <%= image_tag 'facebook-login.png' %>

@@ -42,6 +42,7 @@ gem 'omniauth-linkedin'
 gem 'fb_graph'
 gem 'twitter'
 gem 'cancancan'
+gem 'carrierwave'
 gem 'searchkick'
 gem 'bootstrap-sass', '~> 3.1.1'
 

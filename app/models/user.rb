@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_many :user_skills
   has_many :skills, through: :user_skills
 
+  mount_uploader :image, ImageUploader
+
   scope :non_admin, -> { joins(:roles).where.not(roles: { name: 'admin' }) }
   scope :admin, -> { joins(:roles).where(roles: { name: 'admin'}) }
 
